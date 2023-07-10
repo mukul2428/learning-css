@@ -22,3 +22,32 @@ article>p{
 p:hover{
     color: orange;
 }
+
+/* 
+vw - view width - works absolute - works acc. to width of browser screen
+% - works relative to parent
+px - works absolute - will be visible same in all sizes
+em - relative to parent - also relative to font size defined in browser
+rem - relative to root(html tag)
+
+use rem with font-size
+never use absolute size in font size
+
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    /* this will not include padding and borders to the width and height of every element */
+}
+
+.box-model{
+    width: 200px;
+    height: 200px;
+    border: 20px solid red;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 5px 10px 5px;
+    /* top right bottom left */
+}
