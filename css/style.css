@@ -1,0 +1,24 @@
+*{
+    font-weight: bold;
+}
+body{
+    font-size: 18px;
+    text-align: center;
+    border: 2px dotted black;
+}
+h1{
+    background-color: red;
+    color: pink;
+}
+article>p{
+    color: black;
+}
+#first, #second{
+    color: red;
+}
+.purple{
+    color: purple;
+}
+p:hover{
+    color: orange;
+}
