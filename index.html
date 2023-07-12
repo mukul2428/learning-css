@@ -21,23 +21,45 @@
     </style>
   </head>
   <body>
-    <h1>This is test html</h1>
-    <p style="font-family: 'Courier New', Courier, monospace;">this is test paragraph</p>
+    
+    <!-- these are semantic tags - like article, nav, footer, main, thead, table etc -->
+    
     <main>
+
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+          </ul>
+        </nav>
+
+        
+        <h1>This is test html</h1>
+        <p style="font-family: 'Courier New', Courier, monospace;">this is test paragraph</p>
         <article id="first">
             <h2>ID Selector</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, libero.</p>
         </article>
-        <article id="second" class="purple">
+        <article id="second" class="orange">
             <h2>Class Selector</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, libero.</p>
         </article>
-        <article class="purple">
+        <article class="orange">
             <h2>Nesting Selector</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, libero.</p>
         </article>
         <div class="box-model">hello</div>
         <div class="box-model">viral coder</div>
+
+
+        <div class="container">
+          <div class="box blue">Relative</div>
+          <div class="box green">Absolute</div>
+          <div class="box red">Fixed</div>
+          <div class="box purple">Sticky</div>
+        </div>
+        <div class="scroll"></div>
     </main>
   </body>
 </html>

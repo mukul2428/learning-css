@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+ul {
+  color: white;
+  font-size: 1.5rem;
+  text-align: end;
+}
+
+li {
+  display: inline-block;
+  padding: 20px;
+  cursor: pointer;
+}
+
+li:hover {
+  color: greenyellow;
+  text-decoration: underline;
+}
+main{
+  width: 50%;
+  height: 150vh;
+  border: 1px solid black;
+  position: relative;
+  left: 20%;
+  right: 30%;
+  padding: 90px 50px;
+  overflow: auto;
+}
+
+.aside-container {
+  width: 100%;
+  height: 120vh;
+  position: absolute;
+  top: 0;
+}
+
+aside {
+  width: 100px;
+  background-color: plum;
+  height: 80vh;
+  position: sticky;
+  top: 80px;
+  float: right;
+}
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: brown;
+    clear: both;
+}
+.contact{
+  background-color: red;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+/* When an element has a fixed position, it is taken out of the normal 
+flow of the document and positioned relative to the browser window. 
+This means that other elements will not be aware of its presence and will not be affected by it.
+
+In the given HTML and CSS code, the nav element has a fixed position, 
+so it is displayed at the top of the viewport. The paragraph inside the main element 
+is not aware of the nav element's position and behaves as if the nav element is not there. 
+That's why the paragraph appears below the div that contains the nav element. */

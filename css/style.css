@@ -16,8 +16,8 @@ article>p{
 #first, #second{
     color: red;
 }
-.purple{
-    color: purple;
+.orange{
+    color: orange;
 }
 p:hover{
     color: orange;
@@ -36,7 +36,7 @@ never use absolute size in font size
 */
 
 *{
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
     box-sizing: border-box; 
     /* this will not include padding and borders to the width and height of every element */
@@ -51,3 +51,105 @@ never use absolute size in font size
     margin: 10px 5px 10px 5px;
     /* top right bottom left */
 }
+
+ul{
+    font-size: 2rem;
+    background-color: black;
+    color: wheat;
+    text-align: end;
+    /* padding: 10px; */
+}
+li{
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+li:hover{
+    color: blueviolet;
+
+}
+
+/* ul,li,p,div, h1 - are block level element, they take whole width of html
+to make them come in one line we have to use display: inline or display: inline-block */
+
+/* span, a - are inline elements - they don't take width,height
+to make them come in next line we have to use display: block
+inline elements - only take horizontal space(padding, margin), not take vertical space
+*/
+
+/* img - is inline-block element - they take width,height
+inline-block elements - take both horizontal space(padding, margin) and verticle space */
+
+
+.container{
+    width: 500px;
+    height: 800px;
+    margin: 100px;
+    color: white;
+    background-color: burlywood;
+}
+.blue{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative; 
+    /* this is relative to its parent */
+    top: 100px;
+    left: 100px;
+}
+.green{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    /* absolute is dependent to its nearby relative parent, if relative parent not found then root */
+    top: 500px;
+    left: 500px;
+}
+.red{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    /* it will fix the element, no effect on scroll */
+    top: 0;
+    left: 0;
+}
+.purple{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: sticky;
+    /* it will fix the element till the height of its parent is on screen */
+    top: 20px;
+}
+.scroll{
+    height: 100vh;
+}
+
+/* Without position: relative, the top property won't have any effect, 
+and the paragraph will remain in its default position */
+
+/* When an element has a fixed position, it is taken out of the normal 
+flow of the document and positioned relative to the browser window. 
+This means that other elements will not be aware of its presence and will not be affected by it.
+
+In the given HTML and CSS code, the nav element has a fixed position, 
+so it is displayed at the top of the viewport. The paragraph inside the main element 
+is not aware of the nav element's position and behaves as if the nav element is not there. 
+That's why the paragraph appears below the div that contains the nav element. */
+
+
+/* overflow - by default visible
+scroll - x, y scroller
+auto - scroll where required */
+
+/* float - left, right, none, inhert */
+/* clear - it clears float from left, right and both */
+/* only use clear and float for img, text */
+/* if one is given float then other element will find space after it */
+
+
+/* margin: 0 auto; - vertically 0 and horizontally in center of parent */
+/* position: relative, top: 50%, tranform: translateY(-50%) */
