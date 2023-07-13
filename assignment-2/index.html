@@ -9,11 +9,11 @@
   <body>
     <div class="outer-box">
       <div class="inner-box">
-        <header>
+        <header class="signup-header">
           <h1>SignUp</h1>
           <p>It Just Takes 30 Seconds</p>
         </header>
-        <main>
+        <main class="signup-body">
           <form action="#">
             <p>
               <label for="fullname">Full Name</label>
@@ -31,11 +31,17 @@
                 placeholder="Atleast 8 characters"
               />
             </p>
-            <button type="submit" id="submit">Create Account</button>
+            <p>
+              <input type="submit" id="submit" value="Create Account" />
+            </p>
           </form>
         </main>
-        <footer>Already have an Account? <a href="">Login</a></footer>
+        <footer class="signup-footer">
+          <p>Already have an Account? <a href="#">Login</a></p>
+        </footer>
       </div>
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
     </div>
   </body>
 </html>

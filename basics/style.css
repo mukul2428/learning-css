@@ -32,6 +32,7 @@ rem - relative to root(html tag)
 
 use rem with font-size
 never use absolute size in font size
+1 rem = 16px;
 
 */
 
@@ -153,3 +154,31 @@ auto - scroll where required */
 
 /* margin: 0 auto; - vertically 0 and horizontally in center of parent */
 /* position: relative, top: 50%, tranform: translateY(-50%) */
+
+/* in order to center a div make a outer div first and make it have full width
+and height and them center div using above properties */
+
+/* .signup-header h1: This selector targets any <h1> element that is a descendant 
+of an element with the class "signup-header". It will select all <h1> elements 
+inside the "signup-header" class, regardless of their direct parent-child relationship.
+
+.signup-header > h1: This selector targets only the <h1> elements that are an 
+immediate child of an element with the class "signup-header". 
+It will select <h1> elements that are directly nested within the "signup-header" class. */
+
+/* background: linear-gradient(to top left, #ffffffff, #ffffff33)
+to top left is the direction of the gradient. It means that the gradient will start from the bottom 
+right corner and gradually transition towards the top left corner.
+
+#ffffffff: This is a hexadecimal color value #ffffffff, 
+which represents the color white with full opacity (fully opaque). It is the starting color of the gradient.
+
+#ffffff33: This is a hexadecimal color value #ffffff33, which represents the color 
+white with an alpha value of 0.33. The alpha value defines the transparency of the color, 
+where 1.0 is fully opaque and 0.0 is fully transparent. In this case, 
+the alpha value 0.33 makes the color slightly transparent. It is the ending color of the gradient. */
+
+/* 
+The CSS backdrop-filter property allows you to apply graphical effects to the area behind an element, 
+including blurring, color shifting, and more. In this case, the backdrop-filter 
+property is set to blur(8px), which applies a blur effect to the backdrop. */
