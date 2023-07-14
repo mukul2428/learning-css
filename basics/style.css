@@ -141,6 +141,8 @@ so it is displayed at the top of the viewport. The paragraph inside the main ele
 is not aware of the nav element's position and behaves as if the nav element is not there. 
 That's why the paragraph appears below the div that contains the nav element. */
 
+/* position property is static bydefault */
+
 
 /* overflow - by default visible
 scroll - x, y scroller
@@ -182,3 +184,41 @@ the alpha value 0.33 makes the color slightly transparent. It is the ending colo
 The CSS backdrop-filter property allows you to apply graphical effects to the area behind an element, 
 including blurring, color shifting, and more. In this case, the backdrop-filter 
 property is set to blur(8px), which applies a blur effect to the backdrop. */
+
+
+/* for making flex box we need parent div.
+we use display:flex to make a div flex box */
+/* in flex-box = we have main-axis (horizontally) and cross-axis (vertically) */
+/* display: flex = by-default - horizontal that is flex-direction: row */
+
+/* to make flex-box vertically flexed we use flex-direction: column */
+
+/* we have main-container and child-container in flex
+properties for main container are:-
+1. flex-direction:row-reverse, column-reverse, row, column
+2. flex-wrap: wrap, wrap-reverse - it wraps if screen becomes small
+3. gap:10px - it only give gap b/w childeren not b/w child & parent
+4. row-gap: 10px - gap only b/w rows
+5. column-gap: 10px
+6. flex-flow: wrap row - it is combination of flex-wrap & flex-direction
+7. we use justify-content to align the items on main axis(horizontally)
+        justify-content: space-around - it distribute remaining space b/w children
+        justify-content:space-between - only distribute b/w children not child to parent
+        justify-content:flex-start - all move to start(it is by-default)
+        justify-content:flex-end - all move to end
+        justify-content: center - move to center
+8. we use align-items to align items on cross-axis(vertically)
+        align-item: stretch - it stretches vertically to take whole space(by-default)
+        align-item: center - aligns to center vertically
+        align-item: flex-start, flex-end
+9. we use align-content for distance b/w two rows
+        align-content: flex-start - start from above
+        align-content: space-between, space-evenly
+
+properties for child container are:-
+1. order: 2 - it means that particular child will less order and move to :end
+2. flex-grow: 1 - that particular child will grow and take more space(by-default-0)
+3. flex-shrink: 2 - that particular child will shrink more(by-default-1)
+4. flex-basis: 400px - that particular child will have width by default more than others
+5. flex: 0 0 400px - combination of flex-grow,  flex-shrink and flex-basis
+6. align-self: flex-start, stretch - align itself irrrespective of other children */
