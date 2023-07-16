@@ -126,7 +126,7 @@ inline-block elements - take both horizontal space(padding, margin) and verticle
     top: 20px;
 }
 .scroll{
-    height: 100vh;
+    height: 70vh;
 }
 
 /* Without position: relative, the top property won't have any effect, 
@@ -204,6 +204,7 @@ properties for main container are:-
 7. we use justify-content to align the items on main axis(horizontally)
         justify-content: space-around - it distribute remaining space b/w children
         justify-content:space-between - only distribute b/w children not child to parent
+        justify-content:space-evenly - it will have evenly space
         justify-content:flex-start - all move to start(it is by-default)
         justify-content:flex-end - all move to end
         justify-content: center - move to center
@@ -222,3 +223,43 @@ properties for child container are:-
 4. flex-basis: 400px - that particular child will have width by default more than others
 5. flex: 0 0 400px - combination of flex-grow,  flex-shrink and flex-basis
 6. align-self: flex-start, stretch - align itself irrrespective of other children */
+
+
+.main-container{
+    display: flex;
+    flex-direction:row;
+    border: 2px solid black;
+    height: 50vh;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items:stretch;
+    align-content: stretch;
+}
+.box1{
+    border: 2px solid black;
+    width: 160px;
+    flex-basis: 300px;
+    align-self:flex-start;
+}
+.box2{
+    border: 2px solid black;
+    width: 160px;
+    flex-grow: 1;
+}
+.box3{
+    border: 2px solid black;
+    width: 160px;
+}
+.box4{
+    border: 2px solid black;
+    width: 160px;
+}
+.box5{
+    border: 2px solid black;
+    width: 160px;
+}
+.box6{
+    border: 2px solid black;
+    width: 160px;
+}
+
