@@ -157,6 +157,12 @@ auto - scroll where required */
 /* margin: 0 auto; - vertically 0 and horizontally in center of parent */
 /* position: relative, top: 50%, tranform: translateY(-50%) */
 
+/* margin-inline: auto - give margin from left and right */
+/* margin-block: 10px - give from top and bottom */
+
+/* background-size: 10px, background-repeat: no-repeat - by-default it is repeating */
+/* background-postition: center; */
+
 /* in order to center a div make a outer div first and make it have full width
 and height and them center div using above properties */
 
@@ -261,5 +267,35 @@ properties for child container are:-
 .box6{
     border: 2px solid black;
     width: 160px;
+}
+
+
+/* ways for making variables in css
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+}
+
+body {
+    color: var(--primary-text-color);
+} */
+
+
+/* transition: 0.2s ease-out */
+/* box-shadow: 0 0 2px #abds90 - x direction y direction blur */
+
+/* .box:nth-child(2) = apply css for 3rd child */
+
+
+.top-div{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    position: relative;
+}
+.child-div{
+    position: absolute;
+    bottom:20px;
 }
 
