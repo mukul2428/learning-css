@@ -218,7 +218,7 @@ properties for main container are:-
         align-item: stretch - it stretches vertically to take whole space(by-default)
         align-item: center - aligns to center vertically
         align-item: flex-start, flex-end
-9. we use align-content for distance b/w two rows
+9. we use align-content for distance b/w two rows = by-default it is stretch
         align-content: flex-start - start from above
         align-content: space-between, space-evenly
 
@@ -297,5 +297,70 @@ body {
 .child-div{
     position: absolute;
     bottom:20px;
+}
+
+
+/* css - grid
+
+if we want to make anything in grid then we have grid container and set its property
+to display: grid
+parent container properties:-
+1. gap: 10px - gap between rows
+2. row-gap, column-gap
+3. grid-template-columns: 1fr 2fr 1fr 1fr = we will have 4 columns here, we can as
+        many columns depends on our property in the given screen size.
+   grid-template-columns: repeat(4, 1fr) = here 4 times 1fr size columns will be repeated.
+   grid-template-columns: repeat(auto-fill, 1fr) = here columns will autofill in given screen size
+   this is recommended much as it can be achieved by flex
+   grid-template-columns: 200px auto = first column 200px then last will take whatever width remained
+4. grid-template-rows: 200px 80px = first row will be of 200px height and second of 80px height
+5. grid-auto-rows: 200px = for those rows whose height we haven't defined will get 200px height
+6. justify-content: center = this will center columns in between = works horizontally(x-axis)
+7. align-content: center = this will center rows in between = works vertically(y-axis)
+8. align-items: center = this will center the items present in the div.
+
+for grids = align-items applies to Grid items, not the Grid container while align-content 
+    controls how grid items are aligned in the grid container vertically
+
+
+child container properties:-
+1. justify-self: start = move that particular child to start vertically = by-default it is stretch
+2. align-self: start = move that particular child to start horizontally
+3. grid-column-start: 1, grid-column-end: 4 = that particular child will take space of 3 columns = take space from 1st till 3rd index
+  or grid-column: 1 / 4
+  or grid-column: 1 / span 3
+  grid-column: 1 / -1 = take space from 1 till -1 = it will take all columns present in that row
+4. grid-row: 1 / 4 = that particular child will take space of 3 rows
+  or grid-row: 1 / span 3
+5. grid-area: 1/ 1/ 3/ 3 = row start from 1 and end at 3, column start from 1 and end at 3  
+
+
+in parent container
+grid-template-areas: "hdr hdr hdr hdr"
+                     "sbr main main main"
+                     "sbr main main main"
+                     "ftr ftr ftr ftr"
+in child
+.box1{ grid-area: hdr; }
+.box2{ grid-area: sbr; }
+.box3{ grid-area: main; }
+.box4{ grid-area: ftr; } */
+
+
+.grid-container{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    /* grid-template-columns: 100px 200px 100px; */
+    /* grid-template-columns: 200px auto; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fill, 1fr); */
+    grid-template-rows: 180px 80px;
+    grid-auto-rows: 140px;
+}
+.box{
+    border: 2px solid black;
+    padding: 15px;
 }
 
