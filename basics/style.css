@@ -358,9 +358,42 @@ in child
     /* grid-template-columns: repeat(auto-fill, 1fr); */
     grid-template-rows: 180px 80px;
     grid-auto-rows: 140px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
 }
 .box{
     border: 2px solid black;
     padding: 15px;
+}
+#box1{
+    /* justify-self: start; */
+    /* align-self:center; */
+    /* grid-column-start: 2; grid-column-end: 4; */
+    /* grid-column: 1/3; */
+    /* grid-column: 1/span 2; */
+    /* grid-column: 1/-1;
+    grid-row: 2/4; */
+    grid-area: 1/ 1/ 3/ 3;
+}
+
+.grid-temp-container{
+    display: grid;
+    grid-template-areas: "hdr hdr hdr hdr"
+                     "sbr main main main"
+                     "sbr main main main"
+                     "ftr ftr ftr ftr";
+}
+#box1-temp{
+    grid-area: hdr;
+}
+#box2-temp{
+    grid-area: sbr;
+}
+#box3-temp{
+    grid-area: main;
+}
+#box4-temp{
+    grid-area: ftr;
 }
 
