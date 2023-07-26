@@ -307,7 +307,7 @@ to display: grid
 parent container properties:-
 1. gap: 10px - gap between rows
 2. row-gap, column-gap
-3. grid-template-columns: 1fr 2fr 1fr 1fr = we will have 4 columns here, we can as
+3. grid-template-columns: 1fr 2fr 1fr 1fr = we will have 4 columns here, we can have as
         many columns depends on our property in the given screen size.
    grid-template-columns: repeat(4, 1fr) = here 4 times 1fr size columns will be repeated.
    grid-template-columns: repeat(auto-fill, 1fr) = here columns will autofill in given screen size
@@ -324,8 +324,8 @@ for grids = align-items applies to Grid items, not the Grid container while alig
 
 
 child container properties:-
-1. justify-self: start = move that particular child to start vertically = by-default it is stretch
-2. align-self: start = move that particular child to start horizontally
+1. justify-self: start = move that particular child to start horizontally = by-default it is stretch
+2. align-self: start = move that particular child to start vertically
 3. grid-column-start: 1, grid-column-end: 4 = that particular child will take space of 3 columns = take space from 1st till 3rd index
   or grid-column: 1 / 4
   or grid-column: 1 / span 3
@@ -381,7 +381,6 @@ in child
     display: grid;
     grid-template-areas: "hdr hdr hdr hdr"
                      "sbr main main main"
-                     "sbr main main main"
                      "ftr ftr ftr ftr";
 }
 #box1-temp{
@@ -395,5 +394,21 @@ in child
 }
 #box4-temp{
     grid-area: ftr;
+}
+
+/* media queries */
+/* take min-width as stating from
+take max-width as till
+starting from 400px and till 600px apply below property */
+@media (min-width: 400px) and (max-width: 600px) {
+    body{
+        background-color: cadetblue;
+    }
+}
+/* or */
+@media (400px <= width <= 600px) {
+    body{
+        background-color: cadetblue;
+    }
 }
 
