@@ -412,3 +412,7 @@ starting from 400px and till 600px apply below property */
     }
 }
 
+/* it is just reducing 50% by 10px */
+
+/* width: calc(50% - 10px); */
+
