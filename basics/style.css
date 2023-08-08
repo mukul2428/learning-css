@@ -416,3 +416,134 @@ starting from 400px and till 600px apply below property */
 
 /* width: calc(50% - 10px); */
 
+
+/* pseudo class - it is used to define a special state of an element
+
+:link - normal initial state of button
+:visited - visited state of button
+:active - this is after click property of button
+ul li:first-child - this will select first li child of ul
+ul li:last-child - select last child
+ul li:nth-child(4) - select 4th child
+ul li:nth-child(2n) - all even child
+:nth-child(2n+1) */
+
+/* pseudo elements - it selects specified part of an element
+
+h2::first-letter - only first letter of h2 will be selected
+h2::first-line - selects only first line
+::selection - this will change selection of that page
+
+h2::before - so anything before h2 tag will be selected - this before will not present in dom
+h2::before{
+    content: 'any';
+}
+h2::after{
+    content: '*';
+}
+
+we use ::before and ::after in forms for required fields */
+
+.learn:link{
+    color: red;
+    background-color: blue;
+    padding: 20px;
+}
+.learn:visited{
+    color: yellow;
+}
+.learn:hover{
+    border: 2px solid black;
+}
+.learn:active{
+    border: 4px solid brown;
+}
+
+/* ul li:first-child{
+    background-color: red;
+}
+ul li:last-child{
+    background-color: blue;
+}
+ul li:nth-child(4){
+    background-color: tomato;
+}
+ul li:nth-child(2n+1){
+    color: violet;
+}
+h2::first-letter{
+    color: red;
+}
+h2::first-line{
+    color: indigo;
+}
+::selection{
+    color: yellow;
+    background-color: tomato;
+}
+h2::before{
+    content: 'any';
+}
+h2::after{
+    content: '*';
+} */
+
+
+/* transform property = applies a 2d or 3d animation to an element, how to move from point to point b
+
+transform: scale(2); = it will increase the size in x and y direction by 2times
+transform: scaleX(2) scaleY(1.5); = it will increase the size in x direction by 2times and  1.5 in y direction
+transform: scaleZ(2) = towards z direction
+transform: scaleX(2, 1.5) = x and y
+
+transform: skew(2, 1.5) = rotate in x and y direction
+
+tranform: translate(20px, 40px) = it will move relative to the parent in x and y direction
+tranform: translate(50%, 50%) = this will move content to center from x and y direction
+
+tranform: rotate(45deg) = bydefault rotate in z direction
+tranform: rotateX(45deg) = rotate in X
+
+can apply all above properties together also
+
+tranform-orgin = using this we can define the origin from where we want to apply scale, skew, translate, rotate
+tranform-orgin: top;
+tranform-orgin: 50% 50% = center = this is by-default value = so apply all property from center
+
+
+transition-duration: 1s = take 1 second to apply
+transition-property = on which property we want transition to be applied = by-default = all = all is not prefered to be applied as to take more computation
+transition-property: border-radius;
+transition-delay: 1s = take delay of 1s to apply transition
+transition-timing-function = tell about how we are moving from a point to b point
+transition-timing-function: ease = specifies transition effect with slow start, then fast, then end slowly(by-default)
+transition-timing-function: ease-in = starts slow
+transition-timing-function: ease-out = ends slow
+transition-timing-function: linear
+transition-timing-function: cubic-bezier(n,n) = we can define our own value in this
+
+animation-name: circles;
+animation-duration: 4s;
+animation-delay: 2s;
+animation-iteration-count: infinite;
+animation-direction: reverse; = we have alternate, alternate-reverse
+animation-timing-function: linear
+animation-fill-mode: forward = it will stop where we have 100% = by-default none
+animation-fill-mode: backward
+
+animation = it is shorthand for all above properties
+@keyframes circles {
+    0%, 100% {
+        transform: translate(0,0);
+    }
+    25% {
+        transform: translate(200px,0);
+    }
+    50% {
+        transform: translate(200px,200px);
+    }
+    75% {
+        transform: translate(0,200px);
+    }
+}
+using from and to for 0 and 100 */
