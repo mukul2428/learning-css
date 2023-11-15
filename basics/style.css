@@ -23,6 +23,46 @@ p:hover{
     color: orange;
 }
 
+
+/* position: relative;
+When you set an element's position to relative, it means that the element will be positioned relative to its normal position in the document flow. In other words, it will still occupy space in the document flow, but you can move it from its default position using the top, right, bottom, and left properties.
+
+Example:
+
+.relative-container {
+  position: relative;
+}
+
+.relative-child {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+In this example, the child element with the class .relative-child will be moved 20 pixels down and 30 pixels to the right from its normal position within the .relative-container.
+
+position: absolute;
+When you set an element's position to absolute, it takes the element out of the normal document flow, and its position is then relative to the nearest positioned ancestor (an ancestor element with a position value other than static, which is the default).
+
+Example:
+
+.absolute-container {
+  position: relative;
+}
+
+.absolute-child {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+In this example, the child element with the class .absolute-child will be positioned 50 pixels down and 50 pixels to the right of its nearest positioned ancestor, which is the .absolute-container.
+
+If there is no positioned ancestor, the element will be positioned relative to the initial containing block, typically the <html> element.
+
+Keep in mind that when you use position: absolute, the element is taken out of the normal flow, so it won't affect the layout of other elements. This can sometimes lead to overlapping if not managed properly.
+
+It's common to use position: relative on a container and position: absolute on its children to create specific layouts or positioning effects. */
+
+
 /* 
 vw - view width - works absolute - works acc. to width of browser screen
 % - works relative to parent
@@ -293,7 +333,7 @@ body {
 
 
 /* transition: 0.2s ease-out */
-/* box-shadow: 0 0 2px #abds90 - x direction y direction blur */
+/* box-shadow: 0 0 2px #6f3434 - x direction, y direction, blur amount */
 
 /* .box:nth-child(2) = apply css for 3rd child */
 
