@@ -23,6 +23,46 @@ p:hover{
     color: orange;
 }
 
+
+/* position: relative;
+When you set an element's position to relative, it means that the element will be positioned relative to its normal position in the document flow. In other words, it will still occupy space in the document flow, but you can move it from its default position using the top, right, bottom, and left properties.
+
+Example:
+
+.relative-container {
+  position: relative;
+}
+
+.relative-child {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+In this example, the child element with the class .relative-child will be moved 20 pixels down and 30 pixels to the right from its normal position within the .relative-container.
+
+position: absolute;
+When you set an element's position to absolute, it takes the element out of the normal document flow, and its position is then relative to the nearest positioned ancestor (an ancestor element with a position value other than static, which is the default).
+
+Example:
+
+.absolute-container {
+  position: relative;
+}
+
+.absolute-child {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+In this example, the child element with the class .absolute-child will be positioned 50 pixels down and 50 pixels to the right of its nearest positioned ancestor, which is the .absolute-container.
+
+If there is no positioned ancestor, the element will be positioned relative to the initial containing block, typically the <html> element.
+
+Keep in mind that when you use position: absolute, the element is taken out of the normal flow, so it won't affect the layout of other elements. This can sometimes lead to overlapping if not managed properly.
+
+It's common to use position: relative on a container and position: absolute on its children to create specific layouts or positioning effects. */
+
+
 /* 
 vw - view width - works absolute - works acc. to width of browser screen
 % - works relative to parent
@@ -74,7 +114,7 @@ li:hover{
 /* ul,li,p,div, h1 - are block level element, they take whole width of html
 to make them come in one line we have to use display: inline or display: inline-block */
 
-/* span, a - are inline elements - they don't take width,height
+/* span, a - are inline elements - they don't take width,height - don't take inline width
 to make them come in next line we have to use display: block
 inline elements - only take horizontal space(padding, margin), not take vertical space
 */
@@ -93,6 +133,16 @@ height, margins, paddings, and borders, just like block-level elements. However,
 they still flow with the surrounding text and other inline elements. 
 This allows you to control the dimensions and spacing of the element while keeping it inline. */
 
+/* center a div */
+.centered-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Set the position of your div to absolute so that it’s taken out of the normal document flow.
+Set the left and top properties both to 50%. This tells the browser to line up the left and top edge of the div with the center of the page horizontally and vertically (ie. 50% to the right and down the page).
+Set the transform property to translate(-50%, -50%). This moves the div 50% to the left and up from its current position. That will tell the browser to put the center of the div in the center of the page. */
 
 .container{
     width: 500px;
@@ -166,7 +216,7 @@ auto - scroll where required */
 
 
 /* margin: 0 auto; - vertically 0 and horizontally in center of parent */
-/* position: relative, top: 50%, transform: translateY(-50%) */
+/* position: relative; top: 50%; transform: translateY(-50%) */
 
 /* margin-inline: auto - give margin from left and right */
 /* margin-block: 10px - give from top and bottom */
@@ -294,7 +344,7 @@ body {
 
 
 /* transition: 0.2s ease-out */
-/* box-shadow: 0 0 2px #abds90 - x direction y direction blur */
+/* box-shadow: 0 0 2px #6f3434 - x direction, y direction, blur amount */
 
 /* .box:nth-child(2) = apply css for 3rd child */
 
@@ -322,7 +372,7 @@ parent container properties:-
         many columns depends on our property in the given screen size.
    grid-template-columns: repeat(4, 1fr) = here 4 times 1fr size columns will be repeated.
    grid-template-columns: repeat(auto-fill, 1fr) = here columns will autofill in given screen size
-   this is recommended much as it can be achieved by flex
+   this is not recommended much as it can be achieved by flex
    grid-template-columns: 200px auto = first column 200px then last will take whatever width remained
 4. grid-template-rows: 200px 80px = first row will be of 200px height and second of 80px height
 5. grid-auto-rows: 200px = for those rows whose height we haven't defined will get 200px height
@@ -500,7 +550,7 @@ h2::after{
 } */
 
 
-/* transform property = applies a 2d or 3d animation to an element, how to move from point to point b
+/* transform property = applies a 2d or 3d animation to an element, how to move from point a to point b
 
 transform: scale(2); = it will increase the size in x and y direction by 2times
 transform: scaleX(2) scaleY(1.5); = it will increase the size in x direction by 2times and  1.5 in y direction
