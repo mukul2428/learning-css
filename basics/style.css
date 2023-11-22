@@ -82,6 +82,17 @@ inline elements - only take horizontal space(padding, margin), not take vertical
 /* img - is inline-block element - they take width,height
 inline-block elements - take both horizontal space(padding, margin) and verticle space */
 
+/* inline-elements:-
+Elements with display: inline; are displayed inline, meaning they flow with the surrounding 
+text and other inline elements. They do not start on a new line and only take up as much width 
+as necessary. Examples of inline elements include <span>, <a>, <strong>, and <em>.
+
+inline-block-elements:-
+Elements with display: inline-block; are similar to inline elements, but they can have a width, 
+height, margins, paddings, and borders, just like block-level elements. However, 
+they still flow with the surrounding text and other inline elements. 
+This allows you to control the dimensions and spacing of the element while keeping it inline. */
+
 
 .container{
     width: 500px;
@@ -155,7 +166,7 @@ auto - scroll where required */
 
 
 /* margin: 0 auto; - vertically 0 and horizontally in center of parent */
-/* position: relative, top: 50%, tranform: translateY(-50%) */
+/* position: relative, top: 50%, transform: translateY(-50%) */
 
 /* margin-inline: auto - give margin from left and right */
 /* margin-block: 10px - give from top and bottom */
@@ -208,9 +219,9 @@ properties for main container are:-
 5. column-gap: 10px
 6. flex-flow: wrap row - it is combination of flex-wrap & flex-direction
 7. we use justify-content to align the items on main axis(horizontally)
-        justify-content: space-around - it distribute remaining space b/w children
-        justify-content:space-between - only distribute b/w children not child to parent
-        justify-content:space-evenly - it will have evenly space
+        justify-content: space-around - Items will have space before, between, and after themn
+        justify-content:space-between - Items will have space between them
+        justify-content:space-evenly - 	Items will have equal space around them
         justify-content:flex-start - all move to start(it is by-default)
         justify-content:flex-end - all move to end
         justify-content: center - move to center
