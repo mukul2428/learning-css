@@ -263,7 +263,7 @@ we use display:flex to make a div flex box */
 /* we have main-container and child-container in flex
 properties for main container are:-
 1. flex-direction:row-reverse, column-reverse, row, column
-2. flex-wrap: wrap, wrap-reverse - it wraps if screen becomes small
+2. flex-wrap: wrap, wrap-reverse - it wraps if screen becomes small - prevents overflow
 3. gap:10px - it only give gap b/w childeren not b/w child & parent
 4. row-gap: 10px - gap only b/w rows
 5. column-gap: 10px
@@ -290,6 +290,14 @@ properties for child container are:-
 4. flex-basis: 400px - that particular child will have width by default more than others
 5. flex: 0 0 400px - combination of flex-grow,  flex-shrink and flex-basis
 6. align-self: flex-start, stretch - align itself irrrespective of other children */
+
+/* 
+flex: 1 =>
+flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for
+                     e.g:- if 3 divs are in the wrapper then each div will take 33%. */
 
 
 .main-container{
@@ -407,6 +415,7 @@ in child
 .box3{ grid-area: main; }
 .box4{ grid-area: ftr; } */
 
+/* grid-auto-flow: row; */
 
 .grid-container{
     display: grid;
@@ -550,6 +559,11 @@ h2::after{
 } */
 
 
+/* .container > * {
+
+}  = this will select all children of container */
+
+
 /* transform property = applies a 2d or 3d animation to an element, how to move from point a to point b
 
 transform: scale(2); = it will increase the size in x and y direction by 2times
@@ -608,3 +622,32 @@ animation = it is shorthand for all above properties
     }
 }
 using from and to for 0 and 100 */
+
+/* box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+The first set of values (12px 12px 16px 0) represents the shadow on the right and 
+bottom of the element.
+
+12px is the horizontal offset.
+12px is the vertical offset.
+16px is the blur radius, which determines the blurriness of the shadow.
+0 is the spread radius, which influences the size of the shadow.
+The second set of values (-8px -8px 12px 0) represents the shadow on the left 
+and top of the element.
+
+-8px is the horizontal offset (negative, indicating to the left).
+-8px is the vertical offset (negative, indicating upwards).
+12px is the blur radius.
+0 is the spread radius.
+The color of the first shadow is rgba(0, 0, 0, 0.25), which represents a 
+semi-transparent black color. The last value in the RGBA tuple (0.25) 
+is the alpha channel, controlling the transparency.
+
+The color of the second shadow is rgba(255, 255, 255, 0.3), which represents 
+a semi-transparent white color. Similarly, the alpha channel (0.3) controls the transparency.
+
+In summary, this box-shadow rule creates a dual-shadow effect, giving the 
+appearance of a raised or lifted surface with a light source coming from the top-left. 
+The shadows on the right and bottom are darker, while the shadows on the 
+left and top are lighter, creating a three-dimensional effect. */
