@@ -224,8 +224,8 @@ auto - scroll where required */
 /* background-size: 10px, background-repeat: no-repeat - by-default it is repeating */
 /* background-postition: center; */
 
-/* in order to center a div make a outer div first and make it have full width
-and height and them center div using above properties */
+/* in order to center a div, make a outer div first and make it have full width
+and height and then center div using above properties */
 
 /* .signup-header h1: This selector targets any <h1> element that is a descendant 
 of an element with the class "signup-header". It will select all <h1> elements 
@@ -251,6 +251,9 @@ the alpha value 0.33 makes the color slightly transparent. It is the ending colo
 The CSS backdrop-filter property allows you to apply graphical effects to the area behind an element, 
 including blurring, color shifting, and more. In this case, the backdrop-filter 
 property is set to blur(8px), which applies a blur effect to the backdrop. */
+
+
+/* The overflow-wrap CSS property applies to inline elements, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box. */
 
 
 /* for making flex box we need parent div.
