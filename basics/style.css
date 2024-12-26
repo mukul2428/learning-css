@@ -654,3 +654,6 @@ In summary, this box-shadow rule creates a dual-shadow effect, giving the
 appearance of a raised or lifted surface with a light source coming from the top-left. 
 The shadows on the right and bottom are darker, while the shadows on the 
 left and top are lighter, creating a three-dimensional effect. */
+
+
+if flex-direction is 'column' then align-items is replaced with justify-content
